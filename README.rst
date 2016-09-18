@@ -29,7 +29,7 @@ About Langevin Dynamics
 Langevin Dynamics is used in mathematical modeling of molecular systems and
 their dynamics. Langevin Dynamics model is the first project in CHE 477.
 
-
+In this project we will attemp to model dynamics of a simple system.
 Features
 --------
 
