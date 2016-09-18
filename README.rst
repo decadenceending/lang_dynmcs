@@ -24,6 +24,11 @@ CHE477 Langevin Dynamics Project
 * Free software: MIT license
 * Documentation: https://lang-dynmcs.readthedocs.io.
 
+About Langevin Dynamics
+
+Langevin Dynamics is used in mathematical modeling of molecular systems and
+their dynamics. Langevin Dynamics model is the first project in CHE 477.
+
 
 Features
 --------
@@ -37,4 +42,3 @@ This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypack
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
-
