@@ -4,14 +4,15 @@ from langinput.py import *
 def lang_dynmcs(xi, vi, temp, Kd, dtime, Ttot, Uenergy, Fnet):
 #Calculate position
     def position(xi,dtime):
-        return xnext=xi + dtime*xi
+        return xi + dtime*xi
 #Calculate new velocity
     def velocity(vi,dtime):
-        return vnext=vi+ dtime*vi
+        return vi+ dtime*vi
 #Calculate acceleration
     def forcenet(m,vnext,vi,dtime):
-        return Fnet=m*(vnext-vi/dtime)
+        return m*(vnext-vi/dtime)
 
+#print (position(xi,dtime),velocity(vi,dtime),forcenet(m,vnext,vi,dtime))
 #Defining For Loop
 #for T in range(0,Ttot)
     #lang_dynmcs
