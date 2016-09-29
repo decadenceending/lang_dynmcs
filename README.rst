@@ -16,6 +16,10 @@ Langevin Dynamics
 .. image:: https://pyup.io/repos/github/spectrumtouch/lang_dynmcs/shield.svg
      :target: https://pyup.io/repos/github/spectrumtouch/lang_dynmcs/
      :alt: Updates
+     
+.. image:: https://coveralls.io/repos/github/spectrumtouch/lang_dynmcs/badge.svg?branch=master
+:target: https://coveralls.io/github/spectrumtouch/lang_dynmcs?branch=master
+
 
 
 CHE477 Langevin Dynamics Project
