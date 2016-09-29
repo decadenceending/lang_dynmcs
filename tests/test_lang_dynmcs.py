@@ -38,8 +38,18 @@ class TestLang_dynmcs(unittest.TestCase):
         help_result = runner.invoke(cli.main, ['--help'])
         assert help_result.exit_code == 0
         assert '--help  Show this message and exit.' in help_result.output
-
+    def test_velocity(self):
+        self.assertEqual(position(xi=1,dtime=0.01), 1.01)
+        tests = unittest.TestLoader().loadTestsFromTestCase(TestLang_dynmcs)
+        unittest.TextTestRunner().run(tests)
+    def test_position(self):
+        self.assertEqual(velocity(vi=1,dtime=0.01), 1.01)
+        tests = unittest.TestLoader().loadTestsFromTestCase(TestLang_dynmcs)
+        unittest.TextTestRunner().run(tests)
+    def test_force(self):
+        self.assertEqual(forcenet(m=0.0001,vnext=1.02,vi=1,dtime=0.01), 0.0001)
+        tests = unittest.TestLoader().loadTestsFromTestCase(TestLang_dynmcs)
+        unittest.TextTestRunner().run(tests)
 
 if __name__ == '__main__':
     sys.exit(unittest.main())
-    #Will be testing velocity, temperature and position units
