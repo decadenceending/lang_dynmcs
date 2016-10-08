@@ -16,8 +16,12 @@ from contextlib import contextmanager
 
 from lang_dynmcs import lang_dynmcs
 
-
-
+def testaccl(Fnet):
+    return Fnet/0.001
+def testvel(accl):
+    return 1+accl*0.01
+def testpos(vel):
+    return 1+vel*0.01
 
 class TestLang_dynmcs(unittest.TestCase):
 
@@ -33,16 +37,16 @@ class TestLang_dynmcs(unittest.TestCase):
     def test_command_line_interface(self):
         assert help_result.exit_code == 0
         assert '--help  Show this message and exit.' in help_result.output
+    def test_accl(self):
+        self.assertEqual(testaccl(1.01), 1010)
+        tests = unittest.TestLoader().loadTestsFromTestCase(TestLang_dynmcs)
+        unittest.TextTestRunner().run(tests)
     def test_velocity(self):
-        self.assertEqual(position(xi=1,dtime=0.01), 1.01)
+        self.assertEqual(testvel(1010), 11.1)
         tests = unittest.TestLoader().loadTestsFromTestCase(TestLang_dynmcs)
         unittest.TextTestRunner().run(tests)
     def test_position(self):
-        self.assertEqual(velocity(vi=1,dtime=0.01), 1.01)
-        tests = unittest.TestLoader().loadTestsFromTestCase(TestLang_dynmcs)
-        unittest.TextTestRunner().run(tests)
-    def test_force(self):
-        self.assertEqual(forcenet(m=0.0001,vnext=1.02,vi=1,dtime=0.01), 0.0001)
+        self.assertEqual(testpos(11.1), 1.111)
         tests = unittest.TestLoader().loadTestsFromTestCase(TestLang_dynmcs)
         unittest.TextTestRunner().run(tests)
 
