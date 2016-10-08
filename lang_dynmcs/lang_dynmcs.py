@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 import math
 import random
-#from langinput.py import *
-def lang_dynmcs(xi, vi, temp, coeff, dtime,Uenergy,ttot):
+def lang_dynmcs(xi, vi, temp, coeff, dtime,ttot):
     crs = open(langinput.py, "r")
-    for dtime in [float(j) / 100 for j in range(0, ttot, 1)]:
-        Fnet=((-vi*coeff)+random*sqrt(2*coeff*temp)-Uenergy)
+    crs = open(Uenergy.txt, "r")
+    for dtime in [(float(j) / 100) for j in range(0, ttot, 1)]:
+        random.random()
+        Fnet = ((-vi*coeff)+random*sqrt(2*coeff*temp)-Uenergy)
         accl = Fnet/m
         vi = vi + dtime*accl
         xi = xi + dtime*vi
