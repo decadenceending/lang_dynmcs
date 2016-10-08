@@ -1,21 +1,23 @@
 # -*- coding: utf-8 -*-
 import math
-from langinput.py import *
-def lang_dynmcs(xi, vi, temp, Kd, dtime, Ttot, Uenergy, Fnet):
-#Calculate position
-    def position(xi,dtime):
-        return xi + dtime*xi
-#Calculate new velocity
-    def velocity(vi,dtime):
-        return vi+ dtime*vi
-#Calculate acceleration
-    def forcenet(m,vnext,vi,dtime):
-        return m*(vnext-vi/dtime)
-
-#print (position(xi,dtime),velocity(vi,dtime),forcenet(m,vnext,vi,dtime))
-#Defining For Loop
-#for T in range(0,Ttot)
-    #lang_dynmcs
-    #vi=vnext
-    #xi=xnext
-    #T=T+dtime
+import random
+#from langinput.py import *
+def lang_dynmcs(xi, vi, temp, coeff, dtime,Uenergy,ttot):
+    crs = open(langinput.py, "r")
+    for dtime in [float(j) / 100 for j in range(0, ttot, 1)]:
+        Fnet=((-vi*coeff)+random*sqrt(2*coeff*temp)-Uenergy)
+        accl = Fnet/m
+        vi = vi + dtime*accl
+        xi = xi + dtime*vi
+        index.append(j)
+        position.append(xi)
+        velocity.append(vi)
+    ldout = open('Output.txt', 'w')
+    for j in index:
+        ldout.write("%s\n" % j)
+    for j in position:
+        ldout.write("%s\n" % j)
+    for j in velocity:
+        ldout.write("%s\n" % j)
+    ldout.close()
+print ("End of Computations!")

@@ -16,7 +16,7 @@ Langevin Dynamics
 .. image:: https://pyup.io/repos/github/spectrumtouch/lang_dynmcs/shield.svg
      :target: https://pyup.io/repos/github/spectrumtouch/lang_dynmcs/
      :alt: Updates
-     
+
 .. image:: https://coveralls.io/repos/github/spectrumtouch/lang_dynmcs/badge.svg?branch=master
 :target: https://coveralls.io/github/spectrumtouch/lang_dynmcs?branch=master
 
@@ -34,7 +34,13 @@ Langevin Dynamics is used in mathematical modeling of molecular systems and
 their dynamics. Langevin Dynamics model is the first project in CHE 477.
 
 In this project we will attemp to model dynamics of a simple system.
-Features
+Features:
+- Calculate net Force for each time step, by considering:
+  solvent force, solvent drag force and potential energy.
+- Calculate acceleration using the obtained net Force
+- Use obtained acceleration to calculate new velocity for the current time
+- Calculate current position using the velocity for the current time step,
+  from the previous step.
 --------
 
 * TODO
