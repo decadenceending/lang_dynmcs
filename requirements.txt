@@ -1,2 +1,0 @@
-deps =
-;     -r{toxinidir}/requirements.txt
