@@ -12,16 +12,12 @@ Tests for `lang_dynmcs` module.
 import sys
 import unittest
 from contextlib import contextmanager
-
+from click.testing import CliRunner
 
 from lang_dynmcs import lang_dynmcs
+from lang_dynmcs import cli
 
-def testaccl(Fnet):
-    return Fnet/0.001
-def testvel(accl):
-    return 1+accl*0.01
-def testpos(vel):
-    return 1+vel*0.01
+
 
 class TestLang_dynmcs(unittest.TestCase):
 
@@ -35,20 +31,10 @@ class TestLang_dynmcs(unittest.TestCase):
         pass
 
     def test_command_line_interface(self):
+        runner = CliRunner()
+        result = runner.invoke(cli.main)
+        assert result.exit_code == 0
+        assert 'lang_dynmcs.cli.main' in result.output
+        help_result = runner.invoke(cli.main, ['--help'])
         assert help_result.exit_code == 0
         assert '--help  Show this message and exit.' in help_result.output
-    def test_accl(self):
-        self.assertEqual(testaccl(1.01), 1010)
-        tests = unittest.TestLoader().loadTestsFromTestCase(TestLang_dynmcs)
-        unittest.TextTestRunner().run(tests)
-    def test_velocity(self):
-        self.assertEqual(testvel(1010), 11.1)
-        tests = unittest.TestLoader().loadTestsFromTestCase(TestLang_dynmcs)
-        unittest.TextTestRunner().run(tests)
-    def test_position(self):
-        self.assertEqual(testpos(11.1), 1.111)
-        tests = unittest.TestLoader().loadTestsFromTestCase(TestLang_dynmcs)
-        unittest.TextTestRunner().run(tests)
-
-if __name__ == '__main__':
-    sys.exit(unittest.main())

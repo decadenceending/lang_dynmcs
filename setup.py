@@ -21,7 +21,7 @@ test_requirements = [
 setup(
     name='lang_dynmcs',
     version='0.1.0',
-    description="CHE477 Langevin Dynamics Project",
+    description="Langevin Dynamics program for computing particle",
     long_description=readme + '\n\n' + history,
     author="Orkhan Abdullayev",
     author_email='spectrum_touch@yahoo.com',
