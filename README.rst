@@ -3,7 +3,7 @@ Langevin Dynamics
 ===============================
 
 
-.. image:: https://img.shields.io/pypi/v/lang_dynmcs.svg
+.. image:: https://img.shields.io/pypi/v/lang_dynmcs.svg.
         :target: https://pypi.python.org/pypi/lang_dynmcs
 
 .. image:: https://img.shields.io/travis/spectrumtouch/lang_dynmcs.svg
@@ -21,7 +21,7 @@ Langevin Dynamics
      :target: https://codecov.io/gh/spectrumtouch/lang_dynmcs
 
 
-Langevin Dynamics program for computing dynamic properties of a particle
+Langevin Dynamics program for computing dynamic properties of a particle.
 
 * Free software: MIT license
 * Documentation: https://lang-dynmcs.readthedocs.io.
