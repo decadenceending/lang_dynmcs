@@ -16,6 +16,7 @@ Langevin Dynamics
 .. image:: https://pyup.io/repos/github/spectrumtouch/lang_dynmcs/shield.svg
      :target: https://pyup.io/repos/github/spectrumtouch/lang_dynmcs/
      :alt: Updates
+     
 .. image:: https://codecov.io/gh/spectrumtouch/lang_dynmcs/branch/master/graph/badge.svg
      :target: https://codecov.io/gh/spectrumtouch/lang_dynmcs
 
