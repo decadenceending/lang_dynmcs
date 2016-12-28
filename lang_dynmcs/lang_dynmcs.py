@@ -49,6 +49,8 @@ def write_output(index_out,time_out,position_out,velocity_out):
 
     f = open("Output.txt", "w")
 
+
+    #Note {0}, {1}, etc, only neede for py26
     for i in range(len(index_out)):
         f.write("{0} {1} {2} {3}\n".format(index_out[i], time_out[i],position_out[i],velocity_out[i]))
 
