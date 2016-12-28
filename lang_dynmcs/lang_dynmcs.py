@@ -3,7 +3,6 @@ import math
 import random
 import os
 
-
 ttot=200
 xi=0
 vi=1
@@ -45,22 +44,19 @@ def potential_energy():
         Uenergy=[x[2] for x in data]
     return Uenergy
 
-def lang_dynmcs(xi, vi, temp, m, coeff, dtime,ttot,jk):
-    #crs = open(langinput.py, "r")
-    #Attempt to take potential energy file and split its columns and create
-    #an array
-    #UIndex=[]; Upos=[]; Uenergy=[]; UForce=[];
-    #i = open(Uenergy.txt,'r')
-    #for line in i:
-    #w, x, y, z = line.split(' ',' ',' ',' ',' ')
-    #UIndex.append(float(w))
-    #Upos.append(float(x))
-    #Uenergy.append(float(y))
-    #UForce.append(float(z))
+#Define function for writing output
+def write_output(index_out,time_out,position_out,velocity_out):
 
+    f = open("Output.txt", "w")
+
+    for i in range(len(index_out)):
+        f.write("{} {} {} {}\n".format(index_out[i], time_out[i],position_out[i],velocity_out[i]))
+
+    f.close()
+
+def lang_dynmcs(xi, vi, temp, m, coeff, dtime,ttot,jk):
 
     #Initiate Arrays for Output
-
     index_out=[]
     time_out=[]
     position_out=[]
@@ -74,18 +70,12 @@ def lang_dynmcs(xi, vi, temp, m, coeff, dtime,ttot,jk):
         vi = velocity(xi,dtime,accl)
         xi = position(xi,dtime,vi)
         index_out.append(jk)
+        time_out.append(dtime)
         position_out.append(xi)
         velocity_out.append(vi)
         jk+=1
 
-    #ldout = open('Output.txt', 'w')
-    #for j in index:
-        #ldout.write("%s\n" % j)
-    #for j in position:
-        #ldout.write("%s\n" % j)
-    #for j in velocity:
-        #ldout.write("%s\n" % j)
-    #ldout.close()
+    write_output(index_out,time_out,position_out,velocity_out)
 
 lang_dynmcs(xi, vi, temp, m, coeff, dtime,ttot,jk)
 print ("End of Computations!")
