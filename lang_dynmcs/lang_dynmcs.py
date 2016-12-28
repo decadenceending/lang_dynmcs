@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import math
 import random
+import os
 
 
 ttot=200
@@ -38,7 +39,7 @@ def position(xi,dtime,vi):
     return xi
 
 def potential_energy():
-    with open('C:\\Parameter_List.txt') as f:
+    with open('Parameter_List.txt') as f:
         f=[x.strip() for x in f if x.strip()]
         data=[tuple(map(float,x.split())) for x in f[0:]]
         Uenergy=[x[2] for x in data]
