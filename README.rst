@@ -18,15 +18,26 @@ Langevin Dynamics
      :alt: Updates
 
 
-Langevin Dynamics program for computing particle
-
+Langevin Dynamics program for computing dynamic properties of a particle
 
 * Free software: MIT license
 * Documentation: https://lang-dynmcs.readthedocs.io.
 
+About Langevin Dynamics
+Langevin Dynamics is used in mathematical modeling of molecular systems and
+their dynamics. Langevin Dynamics model is the first project in CHE 477.
+In this project we will attempt to model dynamics of a simple system.
 
 Features
 --------
+
+Features:
+Calculate net Force for each time step, by considering: solvent force,
+solvent drag force and potential energy.
+Calculate acceleration using the obtained net Force
+Use obtained acceleration to calculate new velocity for the current time
+Calculate current position using the velocity for the current time step,
+from the previous step.
 
 * TODO
 
@@ -37,4 +48,3 @@ This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypack
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
-
