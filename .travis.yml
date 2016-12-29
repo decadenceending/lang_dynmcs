@@ -30,3 +30,6 @@ deploy:
     tags: true
     repo: spectrumtouch/lang_dynmcs
     condition: $TOXENV == py27
+
+after_success:
+  - coveralls --config_file .coveragerc
