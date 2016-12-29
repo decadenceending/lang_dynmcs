@@ -40,5 +40,6 @@ class TestLang_dynmcs(unittest.TestCase):
         assert '--help  Show this message and exit.' in help_result.output
 
     def test_acceleration(self):
+        accl=lang_dynmcs.acceleration(10,0.1)
         acclExp=100
-        self.assertEqual(acceleration.lang_dynmcs(10,0.1),acclExp)
+        self.assertEqual(accl,acclExp)
