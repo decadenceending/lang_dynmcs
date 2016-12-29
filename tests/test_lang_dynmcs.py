@@ -38,3 +38,28 @@ class TestLang_dynmcs(unittest.TestCase):
         help_result = runner.invoke(cli.main, ['--help'])
         assert help_result.exit_code == 0
         assert '--help  Show this message and exit.' in help_result.output
+
+    def test_potential_energy(self):
+        Uenergy=potential_energy()
+        ActLength=len(Uenergy)
+        ExpLength=200
+        self.assertEqual(ExpLength,ActLength)
+
+    def test_force_net(self):
+        Fnet=force_net(1,1,1,[1,2,3],0)
+        self.assertTrue(Fnet>-1.9)
+
+    def test_acceleration(self):
+        accl=acceleration(10,0.1)
+        acclExp=100
+        self.assertEqual(accl,acclExp)
+
+    def test_velocity(self):
+        vi=velocity(1,0.01,0)
+        viExp=1
+        self.assertEqual(vi,viExp)
+
+    def test_position(self):
+        xi=position(0,0.01,1)
+        xiExp=0.01
+        self.assertEqual(xi,xiExp)
