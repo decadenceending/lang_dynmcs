@@ -50,6 +50,6 @@ class TestLang_dynmcs(unittest.TestCase):
         self.assertEqual(vi,viExp)
 
     def test_position(self):
-        xi=position(0,0.01,1)
+        xi=lang_dynmcs.position(0,0.01,1)
         xiExp=0.01
         self.assertEqual(xi,xiExp)

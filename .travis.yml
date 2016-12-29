@@ -20,7 +20,7 @@ install:
 # command to run tests, e.g. python setup.py test
 script:
   - tox -e ${TOXENV}
-  - coverage run ./tests/test_lang_dynmcs.py
+  - coverage run --source=lang_dynmcs setup.py test
 
 # After you create the Github repo and add it to Travis, run the
 # travis_pypi_setup.py script to finish PyPI deployment setup
