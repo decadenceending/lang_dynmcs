@@ -16,7 +16,7 @@ from click.testing import CliRunner
 
 from lang_dynmcs import lang_dynmcs
 from lang_dynmcs import cli
-
+import lang_dynmcs.lang_dynmcs
 
 
 class TestLang_dynmcs(unittest.TestCase):
