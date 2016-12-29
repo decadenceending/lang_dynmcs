@@ -41,4 +41,4 @@ class TestLang_dynmcs(unittest.TestCase):
 
     def test_acceleration(self):
         acclExp=100
-        self.assertEqual(acceleration(10,0.1),acclExp)
+        self.assertEqual(lang_dynmcs.acceleration(10,0.1),acclExp)
