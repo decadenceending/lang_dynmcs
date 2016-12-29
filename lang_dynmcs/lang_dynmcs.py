@@ -51,7 +51,7 @@ def write_output(index_out,time_out,position_out,velocity_out):
         f.write("{0} {1} {2} {3}\n".format(index_out[i], time_out[i],position_out[i],velocity_out[i]))
     f.close()
 
-def lang_dynmcs(xi, vi, temp, m, coeff, dtime,ttot,jk):
+def lang_dynmcs(xi, vi, temp, m, coeff, dtime,ttot):
 
     #Initiate Arrays for Output
     index_out=[]
@@ -75,5 +75,5 @@ def lang_dynmcs(xi, vi, temp, m, coeff, dtime,ttot,jk):
 
     write_output(index_out,time_out,position_out,velocity_out)
 
-lang_dynmcs(xi, vi, temp, m, coeff, dtime,ttot,jk)
+lang_dynmcs(xi, vi, temp, m, coeff, dtime,ttot)
 print ("End of Computations!")
