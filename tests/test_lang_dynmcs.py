@@ -50,9 +50,8 @@ class TestLang_dynmcs(unittest.TestCase):
         self.assertTrue(Fnet>-1.9)
 
     def test_acceleration(self):
-        accl=acceleration(10,0.1)
         acclExp=100
-        self.assertEqual(accl,acclExp)
+        self.assertEqual(acceleration(10,0.1),acclExp)
 
     def test_velocity(self):
         vi=velocity(1,0.01,0)
