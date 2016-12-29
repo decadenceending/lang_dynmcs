@@ -15,7 +15,8 @@ env:
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install:
   - pip install -U tox
-  - pip install codecov
+  - pip install coveralls
+  - pip install .
 # command to run tests, e.g. python setup.py test
 script:
   - tox -e ${TOXENV}
@@ -35,4 +36,4 @@ deploy:
     condition: $TOXENV == py27
 after_success:
   - bash <(curl -s https://codecov.io/bash)
-  - codecov
+  - coveralls
