@@ -10,7 +10,6 @@ temp=1
 coeff=1
 dtime=0.01
 m=0.0001
-jk=0
 
 def force_net(vi,coeff,temp,Uenergy,jk):
 
@@ -59,6 +58,7 @@ def lang_dynmcs(xi, vi, temp, m, coeff, dtime,ttot,jk):
     time_out=[]
     position_out=[]
     velocity_out=[]
+    jk=0
 
     #Perform a loop for the computations
     for time in [(float(j) / 100) for j in range(0, ttot, 1)]:
