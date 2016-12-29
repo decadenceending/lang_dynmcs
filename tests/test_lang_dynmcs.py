@@ -43,3 +43,13 @@ class TestLang_dynmcs(unittest.TestCase):
         accl=lang_dynmcs.acceleration(10,0.1)
         acclExp=100
         self.assertEqual(accl,acclExp)
+
+    def test_velocity(self):
+        vi=lang_dynmcs.velocity(1,0.01,0)
+        viExp=1
+        self.assertEqual(vi,viExp)
+
+    def test_position(self):
+        xi=position(0,0.01,1)
+        xiExp=0.01
+        self.assertEqual(xi,xiExp)
