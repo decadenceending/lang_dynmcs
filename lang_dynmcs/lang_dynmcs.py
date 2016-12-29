@@ -3,24 +3,14 @@ import math
 import random
 import os
 
-with open('langinput.py', "r") as inf:
-    ttot =inf.readline()
-    xi=inf.readline()
-    vi=inf.readline()
-    temp=inf.readline()
-    coeff=inf.readline()
-    dtime=inf.readline()
-    m=inf.readline()
-    jk=inf.readline()
-
-ttot=int(ttot)
-xi=float(xi)
-vi=float(vi)
-temp=float(temp)
-coeff=float(coeff)
-dtime=float(dtime)
-m=float(m)
-jk=int(jk)
+ttot=200
+xi=0
+vi=1
+temp=1
+coeff=1
+dtime=0.01
+m=0.0001
+jk=0
 
 def force_net(vi,coeff,temp,Uenergy,jk):
 
@@ -62,7 +52,7 @@ def write_output(index_out,time_out,position_out,velocity_out):
         f.write("{0} {1} {2} {3}\n".format(index_out[i], time_out[i],position_out[i],velocity_out[i]))
     f.close()
 
-def lang_dynmcs(xi, vi, temp, m, coeff, dtime, ttot,jk):
+def lang_dynmcs(xi, vi, temp, m, coeff, dtime,ttot,jk):
 
     #Initiate Arrays for Output
     index_out=[]
@@ -71,19 +61,19 @@ def lang_dynmcs(xi, vi, temp, m, coeff, dtime, ttot,jk):
     velocity_out=[]
 
     #Perform a loop for the computations
-    for time in [(float(j) / 100) for j in range(0, ttot, 1)]:
+    for dtime in [(float(j) / 100) for j in range(0, ttot, 1)]:
         Uenergy=potential_energy()
         Fnet = force_net(xi,coeff,temp,Uenergy,jk)
         accl = acceleration(Fnet,m)
         vi = velocity(xi,dtime,accl)
         xi = position(xi,dtime,vi)
         index_out.append(jk)
-        time_out.append(time)
+        time_out.append(dtime)
         position_out.append(xi)
         velocity_out.append(vi)
         jk+=1
 
     write_output(index_out,time_out,position_out,velocity_out)
 
-lang_dynmcs(xi, vi, temp, m, coeff,dtime, ttot,jk)
+lang_dynmcs(xi, vi, temp, m, coeff, dtime,ttot,jk)
 print ("End of Computations!")
