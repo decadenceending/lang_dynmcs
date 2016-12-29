@@ -16,7 +16,7 @@ from click.testing import CliRunner
 
 from lang_dynmcs import lang_dynmcs
 from lang_dynmcs import cli
-from lang_dynmcs import acceleration
+from lang_dynmcs import *
 
 
 class TestLang_dynmcs(unittest.TestCase):
@@ -41,4 +41,4 @@ class TestLang_dynmcs(unittest.TestCase):
 
     def test_acceleration(self):
         acclExp=100
-        self.assertEqual(lang_dynmcs.acceleration(10,0.1),acclExp)
+        self.assertEqual(acceleration.lang_dynmcs(10,0.1),acclExp)
