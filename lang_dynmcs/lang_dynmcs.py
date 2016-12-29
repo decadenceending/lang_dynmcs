@@ -61,14 +61,14 @@ def lang_dynmcs(xi, vi, temp, m, coeff, dtime,ttot,jk):
     velocity_out=[]
 
     #Perform a loop for the computations
-    for dtime in [(float(j) / 100) for j in range(0, ttot, 1)]:
+    for time in [(float(j) / 100) for j in range(0, ttot, 1)]:
         Uenergy=potential_energy()
         Fnet = force_net(xi,coeff,temp,Uenergy,jk)
         accl = acceleration(Fnet,m)
         vi = velocity(xi,dtime,accl)
         xi = position(xi,dtime,vi)
         index_out.append(jk)
-        time_out.append(dtime)
+        time_out.append(time)
         position_out.append(xi)
         velocity_out.append(vi)
         jk+=1
