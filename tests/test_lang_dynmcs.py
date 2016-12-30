@@ -39,6 +39,10 @@ class TestLang_dynmcs(unittest.TestCase):
         assert help_result.exit_code == 0
         assert '--help  Show this message and exit.' in help_result.output
 
+    def test_force_net(self):
+        Fnet=lang_dynmcs.force_net(1,1,1,[1,2,3],0)
+        self.assertTrue(Fnet>-1.9)
+
     def test_acceleration(self):
         accl=lang_dynmcs.acceleration(10,0.1)
         acclExp=100
