@@ -16,6 +16,7 @@ env:
 install:
   - pip install -U tox
   - pip install codecov
+  - pip install .
 
 # command to run tests, e.g. python setup.py test
 script:
