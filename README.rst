@@ -32,7 +32,7 @@ their dynamics. Langevin Dynamics model is the first project in CHE 477.
 In this project we will attempt to model dynamics of a simple system.
 
 To use the program define potential energy (Parameter_List.txt) and parameters
-input (langinput.txt) files.
+input (langinput.txt) files, in the main directory of the project (lang_dynmcs).
 
 Once all the necesary information is entered, run the program from
 lang_dynmcs.py.
