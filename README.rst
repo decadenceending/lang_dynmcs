@@ -31,16 +31,23 @@ Langevin Dynamics is used in mathematical modeling of molecular systems and
 their dynamics. Langevin Dynamics model is the first project in CHE 477.
 In this project we will attempt to model dynamics of a simple system.
 
+To use the program define potential energy (Parameter_List.txt) and parameters
+input (langinput.txt) files.
+
+Once all the necesary information is entered, run the program from
+lang_dynmcs.py.
+
 Features
 --------
 
-Features:
 Calculate net Force for each time step, by considering: solvent force,
 solvent drag force and potential energy.
-Calculate acceleration using the obtained net Force
-Use obtained acceleration to calculate new velocity for the current time
-Calculate current position using the velocity for the current time step,
-from the previous step.
+
+Calculate acceleration using the obtained net Force.
+
+Calculate new velocity using time step and current acceleration.
+
+Calculate current position using time step and current velocity.
 
 * TODO
 
