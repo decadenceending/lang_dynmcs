@@ -34,7 +34,7 @@ In this project we will attempt to model dynamics of a simple system.
 To use the program define potential energy (Parameter_List.txt) and parameters
 input (langinput.txt) files, in the main directory of the project (lang_dynmcs).
 
-Once all the necesary information is entered, run the program from
+Once all the necessary information is entered, run the program from
 lang_dynmcs.py.
 
 Features
